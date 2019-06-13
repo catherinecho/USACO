@@ -1,7 +1,7 @@
 /*
 ID: ccho2011
 LANG: JAVA
-TASK: ride
+TASK: gift1
 */
 package section1_2;
 import java.io.*;
@@ -9,21 +9,15 @@ import java.util.*;
 public class gift1 {
 	static Scanner in;
 	static PrintWriter out;
-	static String inFile = "gift1.in";
-	static String outFile = "gift2.out";
-	static String[] result;
 	static StringTokenizer st;
 	static Map<String,Integer> m;
 	static int n;
 	public static void main(String[] args) {
 		try {
-			in = new Scanner(new File(inFile));
-			out = new PrintWriter(new File(outFile));
+			in = new Scanner(new File("gift1.in"));
+			out = new PrintWriter(new File("gift2.out"));
 			init();
-			result = solve();
-			for(int i = 0; i < result.length; i++) {
-				out.println(result[i]);
-			}
+			out.print(solve());
 			out.close();
 			in.close();
 		}catch(Exception e){
@@ -33,12 +27,11 @@ public class gift1 {
 	private static void init() {
 		m = new LinkedHashMap<String,Integer>();
 		n = in.nextInt();
-		result = new String[n];
 		for(int i = 0; i < n; i++) {
 			m.put(in.nextLine(), 0);
 		}
 	}	
-	public static String[] solve() {
+	public static String solve() {
 		for(int x = 0; x < n; x++) {
 			String giver = in.nextLine();
 			st = new StringTokenizer(in.nextLine());
@@ -57,10 +50,10 @@ public class gift1 {
 			m.put(giver, m.get(giver) + remainder);
 		}
 		int y = 0;
+		StringBuilder sb = new StringBuilder();
 		for(String s: m.keySet()) {
-			result[y] = s+" "+m.get(s);
-			y++;
+			sb.append(s).append(" ").append(m.get(s)).append("\n");
 		}
-		return result;
+		return sb.toString();
 	}
 }
