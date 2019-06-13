@@ -9,18 +9,15 @@ import java.io.*;
 public class friday {
 	static Scanner in;
 	static PrintWriter out;
-	static String inFile = "friday.in";
-	static String outFile = "firday.out";
+
 	static int years;
 	static int current;
-	static int day;
-	static int a ;
 	static int[] week; 
 	static String result = "";
 	public static void main(String[] args) {
 		try {
-			in = new Scanner(new File(inFile));
-			out = new PrintWriter(new File(outFile));
+			in = new Scanner(new File("friday.in"));
+			out = new PrintWriter(new File("friday.out"));
 			init();
 			result = solve();
 			
@@ -28,40 +25,33 @@ public class friday {
 			out.close();
 			in.close();
 		}catch(Exception e){
-			System.out.println(e);
+			e.printStackTrace();
 		}
 	}
 	private static void init() {
 		years = Integer.parseInt(in.nextLine());
 		current = 1900;
-		day = 13;
-		a = day % 7-1;
 		week = new int[7]; // week[0] = Monday
 	}
 	public static String solve() {
-		for(int x = 0; x < years; x++){	
-			for(int y = 0; y < 12; y++){		
-				a = day % 7-1;
-				if(a <0){
-					a= a+7;
+		int day = 0;
+		int[] month = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		for(int x = current; x < years + current; x++) {
+			for(int y = 0; y < 12; y++) {
+				week[(day+13) % 7] ++;
+				if (y==1 && leapYear(x)) {
+					day++;
 				}
-				week[a]++;
-				if(y ==0 || y == 2 || y == 4 || y== 6|| y==7||y==9|| y==11){
-					day = day + 31;
-				}else if(y== 1){ // February
-					if(current%400 == 0){ // leap year logic
-						day=day+29;
-					}else if(current %4 ==0 && current%100 !=0 ){ 
-						day=day+29;
-					}
-					else{
-						day = day + 28;
-					}
-				}else{
-					day = day + 30;
-				}
+				day+= month[y];
 			}
-			current++;
+		}
+		return week[6] + " " + week[0] + " " + week[1] + " " + week[2] + " " + week[3] + " " + week[4] + " " + week[5];		
+	}
+	public static boolean leapYear(int x) {
+		if(x % 4 == 0 && (x%100 !=0 || x %400 == 0)) {
+			return true;
+		}else {
+			return false;
 		}
 	}
 }
