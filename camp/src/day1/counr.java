@@ -7,7 +7,6 @@ public class counr {
 		int size = in.nextInt();
 		int a= in.nextInt();
 		String b= Integer.toString(a);
-		char no;
 		int count = 0;
 		boolean yesNo = true;
 		for(int i = 1; i < 2000000; i++) {
@@ -26,7 +25,6 @@ public class counr {
 				continue;
 			}else {
 				count++; 
-				System.out.println(i);
 				if(count == size) {
 					System.out.println(i);
 					break;

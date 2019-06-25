@@ -1,28 +1,15 @@
-/*
-ID: ccho2011
-LANG: JAVA
-TASK: ride
-*/
- package section1_2;
+package section1_2;
 import java.io.*;
 import java.util.*;
 public class ride {
-	static Scanner in;
-	static PrintWriter out;
-	static String inFile = "ride.in";
-	static String outFile = "ride.out";
+	static Scanner in = new Scanner(System.in);
 	static String result = "";
 	static String[] input;
 	public static void main(String[] args) {
 		try {
-			in = new Scanner(new File(inFile));
-			out = new PrintWriter(new File(outFile));
 			init();
 			result = solve();
-			
-			out.println(result);
-			out.close();
-			in.close();
+			System.out.println(result);
 		}catch(Exception e){
 			System.out.println(e);
 		}
