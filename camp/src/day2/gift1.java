@@ -10,6 +10,7 @@ public class gift1 {
 		for(int i = 0; i < NP; i++) {
 			m.put(in.nextLine(), 0);
 		}
+		 
 		for(int x = 0; x < NP; x++) {
 			String giver = in.nextLine();
 			st = new StringTokenizer(in.nextLine());
