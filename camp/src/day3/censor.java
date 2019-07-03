@@ -5,6 +5,7 @@ public class censor {
 		Scanner in = new Scanner(System.in);
 		String word = in.next();
 		String x = in.next();
+		/*
 		int change = 1;
 		while(true) {
 			String temp = word;
@@ -15,5 +16,6 @@ public class censor {
 			}
 		}
 		System.out.println(word);
+		*/
 	}
 }

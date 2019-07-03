@@ -4,9 +4,9 @@ public class reduce1 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int cownum = in.nextInt();
-		points[] p = new points[cownum];
+		points2[] p = new points2[cownum];
 		for(int i = 0; i < cownum; i++) {
-			p[i] = new points(in.nextInt(), in.nextInt());
+			p[i] = new points2(in.nextInt(), in.nextInt());
 		}
 		//min
 		int x1 =Integer.MAX_VALUE;
@@ -79,10 +79,10 @@ public class reduce1 {
 		
 	}
 }
-class points{
+class points2{
 	int x;
 	int y;
-	public points(int X, int Y) {
+	public points2(int X, int Y) {
 		this.x = X;
 		this.y = Y;
 	}
