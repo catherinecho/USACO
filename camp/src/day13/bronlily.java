@@ -30,7 +30,7 @@ public class bronlily {
 			}
 		}
 		q.add(new cows(rk, ck, 0));
-		grid[rk][ck] = 0;
+		grid[rk][ck] = '0';
 		while(!q.isEmpty()) {
 			cows cur = q.remove();
 			if(cur.row == rh && cur.col == ch) {
