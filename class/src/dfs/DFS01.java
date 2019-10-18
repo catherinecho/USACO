@@ -3,6 +3,7 @@ import java.util.*;
 import java.io.*;
 
 public class DFS01 {
+	//hi
 	static int n, m, cnt;
 	static int[][] grid;
 	static Scanner in = new Scanner (System.in);

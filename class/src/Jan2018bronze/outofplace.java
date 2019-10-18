@@ -16,7 +16,7 @@ public class outofplace {
 			out.println(solve());
 		}
 		catch (Exception e) {
-			e.printStackTrace();
+			e.printStackTrace();//hi
 		}
 		in.close();
 		out.close();
@@ -32,6 +32,7 @@ public class outofplace {
 		}
 		Arrays.sort(compare);
 	}
+	
 	private static int solve() {
 		int change = 0;
 		for(int i = 0; i < n; i++ ) {

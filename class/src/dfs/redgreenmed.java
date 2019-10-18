@@ -2,6 +2,7 @@ package dfs;
 import java.util.*;
 import java.io.*;
 public class redgreenmed {
+	//hi
 	static int n;
 	static int[] dr = {1, -1, 0, 0};
 	static int[] dc = {0, 0, 1, -1};

@@ -2,6 +2,7 @@ package dfs;
 import java.util.*;
 import java.io.*;
 public class safetyZone {
+	//hi
 	static int n;
 	static int[][] grid;
 	static int[][] clone;

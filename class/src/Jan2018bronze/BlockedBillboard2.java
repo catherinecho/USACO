@@ -21,6 +21,7 @@ public class BlockedBillboard2 {
 	}
 	private static void init () {
 		
+		//hi
 		bottomL1x = in.nextInt();
 		bottomL1y = in.nextInt();
 		topR1x= in.nextInt();

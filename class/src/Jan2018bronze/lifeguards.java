@@ -25,6 +25,7 @@ public class lifeguards {
 		long[] h = new long[n+1];
 
 		
+		//hi
 		for(int i = 2; i <= 2*n; i++) {
 			if(active.size() == 1) {
 				h[active.first()] += cows[i].time - st;
