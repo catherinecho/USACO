@@ -7,6 +7,7 @@ public class moocast {
 	static int ans = 0;
 	static int c = 0;
 	static boolean[] visited = new boolean[n];
+	
 	static ArrayList<Integer> count = new ArrayList<Integer>();
 	public static void main(String[] args) {
 		for(int i = 0;i < n; i++) {

@@ -1,5 +1,4 @@
 package Jan2017bronze;
-
 import java.util.*;
 import java.io.*;
 public class notlast {
